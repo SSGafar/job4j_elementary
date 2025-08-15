@@ -6,8 +6,8 @@ public class Converter {
             return value / 70;
         }
 
-        public static double rubleToDollar(float value) {
-            return -1;
+        public static double rubleToDollar(double  value) {
+            return value / 60;
         }
     }
 

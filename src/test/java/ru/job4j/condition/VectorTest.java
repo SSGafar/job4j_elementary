@@ -21,7 +21,6 @@ class VectorTest {
         assertThat(output).isEqualTo(expected);
     }
 
-
     @Test
     void whenVectorsMinus12AndMinus34ThenResultMinus46() {
         int x1 = -1, y1 = -2, x2 = -3, y2 = -4;

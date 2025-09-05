@@ -2,37 +2,34 @@ package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class CounterTest {
 
     @Test
-    void whentStart0Finish10Then55() {
-        int start = 0;
+    void whenSumEvenNumbersFromOneToTenThenThirty() {
+        int start = 1;
         int finish = 10;
-        double expected = 55;
-        double output = Counter.sum(start, finish);
-        double value = 0.0001f;
-        assertThat(output).isEqualTo(expected, withPrecision(value));
+        int result = Counter.sumByEven(start, finish);
+        int expected = 30;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    void whentStart3Finish8Then33() {
-        int start = 3;
-        int finish = 8;
-        double expected = 33;
-        double output = Counter.sum(start, finish);
-        double value = 0.0001f;
-        assertThat(output).isEqualTo(expected, withPrecision(value));
+    void whenSumEvenNumbersFromFiveToFifteenThenFifty() {
+        int start = 5;
+        int finish = 15;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 50;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    void whentStart15Finish8Then0() {
-        int start = 15;
-        int finish = 8;
-        double expected = 0;
-        double output = Counter.sum(start, finish);
-        double value = 0.0001f;
-        assertThat(output).isEqualTo(expected, withPrecision(value));
-    }
+    void whenSumEvenNumbersFromMinusTwentyTwoToFifteenThenFifty() {
+        int start = -22;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = -102;
+        assertThat(result).isEqualTo(expected);
+}
 }

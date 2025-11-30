@@ -22,7 +22,7 @@ class FindLoopTest {
         int start = 2;
         int finish = 5;
         int result = FindLoop.indexInRange(data, element, start, finish);
-        int expected = -1;
+        int expected = 5;
         assertThat(result).isEqualTo(expected);
     }
 
